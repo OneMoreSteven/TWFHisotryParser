@@ -220,6 +220,9 @@ void CTWFHistoryParserDlg::OnBnClickedButton1()
 		int nLine = 0;
 		while (InFile.ReadString(szLine))
 		{
+			if (szLine.IsEmpty())
+				continue;
+
 			if (nLine++) // ignore first line
 			{
 				int nToken = 0;
